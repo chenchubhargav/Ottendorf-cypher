@@ -1,0 +1,16 @@
+The purpose of this project is to break the Ottendorf cypher of an encode secret message.  This is the same encoding used in the movie "National Treasure".
+
+The cypher works like this.  You are given a list of number triplets:  LineNumber-WordNumber-CharacterNumber.  These numbers are associated with a secret key document. Using the triplet, the secret character is found by locating the line then word then character given by the triplet.  For example, 7-12-4 would lead to the seventh line, the 12th word, and the 4th character.  This is repeated until the list of triplets is exhausted.For our purposes, the first line of the secret key document is line number zero.  The first word in a line is the zero word.  The characters also start counting at zero.
+
+A further protection, the file name of the secret key document and the encoded triplets has been hidden by embedding them in a text file.  This is called the clue file.  To find them, you will need to write regular expressions to search Clue.txt for the following:
+
+The list of triplets has a filename of one or more digits followed by the period and the file type.  The type can be either txt or TXT.
+The filename of the secret key document begins with an underscore which is followed by 2 uppercase alphabetic characters then three digits, the period, and either txt or TXT.
+(Since I have supplied the files you obviously know the names.  I will verify you have used regular expressions and the clue file to find them.)
+
+Once you have found the code and key files, break the code and print the message!
+
+You should use try/except statements to protect against conversion errors, file not found errors, and index out of range errors. 
+
+
+ 
